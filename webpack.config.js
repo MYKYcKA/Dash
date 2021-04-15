@@ -1,11 +1,10 @@
 // Generated using webpack-cli http://github.com/webpack-cli
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: ['./src/index.js', './src/index.scss'],
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
@@ -17,14 +16,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),
-
-        new BrowserSyncPlugin({
-            // browse to http://localhost:3000/ during development,
-            // ./public directory is being served
-            host: 'localhost',
-            port: 3000,
-            server: { baseDir: ['public'] }
-          }),
         // Add your plugins here
         // Learn more obout plugins from https://webpack.js.org/configuration/plugins/
     ],
@@ -47,5 +38,4 @@ module.exports = {
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
-    watch: true,
 };
