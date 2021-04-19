@@ -1,5 +1,6 @@
 @use "@material/drawer";
 @use "@material/list";
+@use "@material/top-app-bar/mdc-top-app-bar";
 
 @include drawer.core-styles;
 @include drawer.dismissible-core-styles;
@@ -7,27 +8,47 @@
 @include list.core-styles;
 
 body {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .mdc-drawer-app-content {
-    flex: auto;
-    overflow: auto;
-    position: relative;
-    background-color:#5a6378;
-  }
-  
-  .main-content {
-    overflow: auto;
-    height: 100%;
-  }
-  
-  .app-bar {
-    position: absolute;
-  }
-  
-  // Only apply this style if below top app bar.
-  .mdc-top-app-bar {
-    z-index: 7;
-  }
+  display: flex;
+  height: 100vh;
+  margin: 0px;
+}
+
+
+.mdc-drawer{
+  width: 296px;
+  padding-left: 38px;
+  background-color: #393f4f;
+}
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+.app-bar {
+  position: absolute;
+}
+
+.mdc-drawer__header{
+  margin-top: 34px;
+}
+
+.logo-word{
+  padding-left: 12px;
+}
+
+.mdc-list-item{
+  height: 64px;
+  color: white;
+}
+
+.list-img{
+  padding-right: 31px;
+}
+

@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: ['./src/index.js', './src/index.scss'],
+    entry: ['./src/index.js','./src/index.scss'],
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
@@ -16,6 +16,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),
+
         // Add your plugins here
         // Learn more obout plugins from https://webpack.js.org/configuration/plugins/
     ],
