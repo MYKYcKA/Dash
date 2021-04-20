@@ -1,6 +1,8 @@
 @use "@material/drawer";
 @use "@material/list";
 @use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/elevation/mdc-elevation";
+@use "@material/ripple";
 
 @include drawer.core-styles;
 @include drawer.dismissible-core-styles;
@@ -9,14 +11,16 @@
 
 body {
   display: flex;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   margin: 0px;
+  margin-right: 0px;
 }
 
-
-.mdc-drawer{
+.mdc-drawer {
+  position: absolute;
   width: 296px;
-  padding-left: 38px;
+  height: 100%;
   background-color: #393f4f;
 }
 
@@ -35,20 +39,68 @@ body {
   position: absolute;
 }
 
-.mdc-drawer__header{
+.mdc-drawer__header {
   margin-top: 34px;
+  padding-left: 39px;
 }
 
-.logo-word{
+.logo-word {
   padding-left: 12px;
 }
 
-.mdc-list-item{
-  height: 64px;
-  color: white;
+.mdc-list {
+  margin-top: 46px;
 }
 
-.list-img{
-  padding-right: 31px;
+.list-item-img {
+  margin: 22px 30px 22px 39px;
+}
+
+.mdc-list-item {
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple.states-base-color(#2b303e);
+  @include ripple.states-opacities(
+    (
+      hover: 0.2  ,
+    )
+  );
+}
+
+.mdc-drawer .mdc-list-item{
+  color: #596377;
+  margin:0px 0px;
+  padding-left: 0px;
+  height: 64px;
+}
+
+.icon{
+  fill:#596377;
+}
+
+.mdc-list-item__text{
+  padding-left: 2px;
+}
+
+.list-item-img
+{
+ margin: 22px 30px 22px 35px;
+}
+
+.vl {
+  border-left: 4px solid #393f4f;
+  height: 64px;
+}
+
+.mdc-drawer .mdc-list-item:hover{
+  color: white;
+  .vl {
+    border-left: 4px solid #62baf0;
+    height: 64px;
+    
+  }
+  .icon{
+    fill:white;
+  }
 }
 

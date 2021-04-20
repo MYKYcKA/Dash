@@ -32,8 +32,10 @@
   },
   "dependencies": {
     "@material/drawer": "^10.0.0",
+    "@material/elevation": "^11.0.0",
     "@material/icon-button": "^11.0.0",
     "@material/layout-grid": "^11.0.0",
+    "@material/ripple": "^11.0.0",
     "@material/tab-bar": "^10.0.0",
     "@material/top-app-bar": "^11.0.0"
   }

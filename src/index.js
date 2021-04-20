@@ -1,4 +1,4 @@
-import {MDCList} from "@material/list";
+import {MDCList} from '@material/list';
 
 const list = MDCList.attachTo(document.querySelector('.mdc-list'));
 
