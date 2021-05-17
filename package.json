@@ -9,7 +9,8 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "scss": "node-sass --watch src/scss -o src/css"
   },
   "author": "Mykyta Dudcehnko",
   "license": "ISC",
@@ -37,6 +38,7 @@
     "@material/layout-grid": "^11.0.0",
     "@material/ripple": "^11.0.0",
     "@material/tab-bar": "^10.0.0",
-    "@material/top-app-bar": "^11.0.0"
+    "@material/top-app-bar": "^11.0.0",
+    "node-sass": "^6.0.0"
   }
 }

@@ -1,70 +1,815 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Webpack App</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    </head>
-    <body>
-      </div>
-      <aside class="mdc-drawer">
-        <div class="mdc-drawer__header">
-          <img src="src/img/Drawer/Logo-img.png" alt="" class="logo-img">
-          <img src="src/img/Drawer/Logo-word.png" alt="" class="logo-word">
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/css/calendar.css">
+    <!-- Title Page-->
+    <title>Dash</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="src/css/font-face.css" rel="stylesheet" media="all">
+    
+     
+    <link href="src/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="src/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="src/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="src/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="src/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="src/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="src/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="src/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="src/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="src/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="src/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+   
+
+    <!-- Main CSS-->
+    <link href="src/css/theme.css" rel="stylesheet" media="all">
+
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar2">
+            <div class="logo">
+                <a href="#">
+                    <img src="src/image/Logo.png">
+                </a>
+            </div>
+            <div class="menu-sidebar2__content js-scrollbar1">
+               <nav class="navbar-sidebar2">
+                    <ul class="list-unstyled navbar__list" id="myDIV">
+                        <li>
+                            <a class="biton" href="#">
+                                <span><i class="fas fa-file-alt"></i>IMO Report</span>
+                            </a>
+                        </li>
+                        <li class=" has-sub">
+                            <a class="biton active"  href="#">
+                               <span> <i class="fas fa-file"></i>IMO Contact Report</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="biton" href="#">
+                                <span><i class="fas fa-user"></i>Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="biton" href="#">
+                               <span> <i class="fas fa-shopping-basket"></i>CRM</span></a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="biton" href="#">
+                                <span><i class="fas fa-sliders-h"></i></i>MDM</span>
+                            </a>
+
+                        </li>
+                        <li  class="has-sub">
+                            <a class="biton" href="#">
+                                <span><i class="fas fa-copy"></i>Plan Builder</span>
+                            </a>
+        
+                        </li>
+                        <li class="has-sub">
+                            <a class="biton" href="#">
+                                <span><i class="fas fa-cog"></i>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container2">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop2">
+                  
+                        
+                   
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap2">
+                            
+                            <div class="k1 ">
+                                <h4 class="k2">REPORTS</h4>
+                            </div>
+                          
+                            <div class="header-button2 ">
+                                <div class="account-wrap">
+                                    <div class="account-item">
+                                        <div class="image">
+                                            <img src="src/image/Ellipse 1.png" alt>
+                                        </div>
+                                        <div class="content">
+                                            <a href="#" style="white-space: nowrap">Vincent Vega</a>
+                                            <span class="notif1">
+                                        
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="header-button-item ">
+                                    <i class="zmdi zmdi-notifications" style="margin: 0 auto;"></i>
+                                    <span class="notif">
+                                        
+                                    </span>
+                                </div>
+                                <div class="header-button-item ">
+                                    <i class="zmdi zmdi-email" style="margin: 0 auto;"></i>
+                                    <span class="notif">
+                                        
+                                    </span>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+           
+            <section class="au-breadcrumb m-t-75">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="au-breadcrumb-content">
+                                    <form class="form-inline">
+                                      <i class="fa fa-search" aria-hidden="true"></i>
+                                      <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                                    </form>
+                                    <button class="au-btn au-btn-icon au-btn--blue" >
+                                        Create new value <i class="zmdi zmdi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END BREADCRUMB-->
+
+            <!-- STATISTIC-->
+            <section class="statistic">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid ">
+                        <div class="row ">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item d-flex align-items-center">
+                                    <div class="single-chart">
+                                        <svg viewBox="0 0 36 36" class="circular-chart blue">
+                                        <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                        <path class="circle"                                     
+                                        stroke-dasharray="68, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                        <text x="18" y="20.35" class="percentage">68%</text>
+                                      </svg>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-stat">
+                                                <h1 >34</h1>
+                                            </div>
+                                            <div style="margin-left: 10px;">
+                                                <h5>MONTHS REMAINING</h5>
+                                            </div>
+                                            
+                                        </div>
+                                        <div style="margin-top: 3px">
+                                                <h6>JOINED ON DECEMBER 2018</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 ">
+                                <div class="statistic__item d-flex align-items-center">
+                                    <div class="single-chart">
+                                        <svg viewBox="0 0 36 36" class="circular-chart green">                                       
+                                        <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                        <path class="circle"
+                                        stroke-dasharray="39, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                        <text x="18" y="20.35" class="percentage">39%</text>
+                                      </svg>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-stat">
+                                                <h1 >13</h1>
+                                            </div>
+                                            <div style="margin-left: 10px;">
+                                                <h5>PROJECTS COMPLETED</h5>
+                                            </div>
+                                            
+                                        </div>
+                                        <div style="margin-top: 3px">
+                                                <h6>LAST UPDATE 24 HOURS AGO</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item pocket d-flex align-items-center">
+                                    <div class="single-chart" >
+                                        <img src="src/image/Shape 25.png">
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-stat">
+                                                <h1 >$2041</h1>
+                                            </div>
+                                            <div style="margin-left: 10px;">
+                                                <h5>TOTAL REVENUE</h5>
+                                            </div>
+                                            
+                                        </div>
+                                        <div style="margin-top: 3px; white-space: nowrap">
+                                                <h6>NEXT PAYMENT RELEASED ON 3 DAYS</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END STATISTIC-->
+
+            <section class="statistic1">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <!-- RECENT REPORT 2-->
+                                <div class="recent-report2">
+                                    <h3 class="title-3">Champs of the month</h3>
+                                    <h3 class="title-32">Averange time of processing one contract</h3>
+                                    
+                                    <div class="recent-report__chart">
+                                        <canvas id="recent-rep2-chart"></canvas>
+                                    </div>
+                                    <div class="chart-info">
+                                        <div class="chart-info__left">
+                                            <div class="chart-note">
+                                                <span class="dot dot--blue"></span>
+                                                <span>info 1</span>
+                                            </div>
+                                            <div class="chart-note">
+                                                <span class="dot dot--green"></span>
+                                                <span>info 2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END RECENT REPORT 2             -->
+                            </div>
+                            <div class="col-xl-4">
+                                <!-- TASK PROGRESS-->
+                                <div class="task-progress">
+                                    <h3 class="title-3-1">Month wise contract processed for 2021</h3>
+                                    <h3 class="title-3-12">Total contract processed</h3>
+                                    <div class="au-skill-container">
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Contract#1</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner c5 js-progressbar-simple" role="progressbar" data-transitiongoal="50">
+                                                  
+                                                </div>
+                                                  <span class="au-progress__value" >50%</span >
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Contract#2</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner c4 js-progressbar-simple" role="progressbar" data-transitiongoal="87">
+                                                    
+                                                </div>
+                                                <span class="au-progress__value ">87%</span>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Contract#3</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner c3 js-progressbar-simple" role="progressbar" data-transitiongoal="32">
+                                            
+                                                </div>
+                                                <span class="au-progress__value ">32%</span>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Contract#4</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner c1 js-progressbar-simple" role="progressbar" data-transitiongoal="97">
+                                                  
+                                                </div>
+                                                <span class="au-progress__value ">97%</span>
+                                            </div>
+                                        </div>
+                                        <div class="au-progress">
+                                            <span class="au-progress__title">Contract#5</span>
+                                            <div class="au-progress__bar">
+                                                <div class="au-progress__inner c2 js-progressbar-simple" role="progressbar" data-transitiongoal="69">
+                                                    
+                                                </div>
+                                                <span class="au-progress__value ">69%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END TASK PROGRESS-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="statistic1">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <!-- USER DATA-->
+                                <div class="user-data m-b-40">
+                                    <div class="table-responsive table-data">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="rhov1 " >
+                                                    <td style="padding-left: 25px;">DATE</td>
+                                                    <td style="padding-left: 25px;">STORE</td>
+                                                    <td style="padding-left: 25px;">CHANNEL</td>
+                                                    <td style="padding-left: 25px;">MANAGER</td>
+                                                    <td style="padding-left: 25px;">STATUS</td>
+                                                </tr>
+                                            </thead>
+
+                                        </table>
+                                        <table style="width: 100%" id="news"></table>
+                                    </div>
+                                    
+                                </div>
+                                <!-- END USER DATA-->
+                            </div>
+                            <div class="col-xl-4">
+                                <!-- CALENDER-BEGIN-->
+                                <div id='calendar-wrap'>
+                                </div>
+                                <div style="position: relative; top: 85%; left: 30px; ">
+                                   <h5 style="color: white;"> Go get some money </h5>
+                                </div>
+                                 <div style="position: relative; top: 82%; left: 75%; ">
+                                   <h5 style="color: #62baf0;"> View task </h5>
+                                </div>
+                                <!-- END CALENDAR-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END PAGE CONTAINER-->
         </div>
-        <div class="mdc-drawer__content">
-          <ul class="mdc-list">
-            <li class="mdc-list-item" tabindex="0">
-              <div class="vl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22" class="list-item-img">
-                <path class="icon" d="M49.914,139H40.5a2,2,0,0,0-2,2v16a2,2,0,0,0,2,2h12a2,2,0,0,0,2-2V143.586ZM41.5,149h8v2h-8v-2Zm10,6h-10v-2h10v2Zm-3-10v-5l5,5h-5Z" transform="translate(-35.5 -138)"/>
-              </svg>
-              <span class="mdc-list-item__text">IMO Report</span>
-            </li>
-            <li class="mdc-list-item">
-              <div class="vl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" class="list-item-img">
-                <path class="icon" d="M49.914,213H40.5a2,2,0,0,0-2,2v16a2,2,0,0,0,2,2h12a2,2,0,0,0,2-2V217.586ZM48.5,219v-5l5,5h-5Z" transform="translate(-35.5 -212)"/>
-              </svg>
-              <span class="mdc-list-item__text">Contract Report</span>
-            </li>
-            <li class="mdc-list-item">
-              <div class="vl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" class="list-item-img">
-                <path class="icon" d="M50.5,289a4,4,0,1,0-4,4A4,4,0,0,0,50.5,289Zm-4,5c-4.71,0-8,2.467-8,6v1h16v-1C54.5,296.468,51.21,294,46.5,294Z" transform="translate(-35.5 -282)"/>
-              </svg>
-              <span class="mdc-list-item__text">Users</span>
-            </li>
-            <li class="mdc-list-item">
-              <div class="vl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22" class="list-item-img">
-                <path class="icon" d="M57,361v-2a2,2,0,0,0-2-2H39a2,2,0,0,0-2,2v2H57Zm-14-3a1,1,0,1,1-1,1A1,1,0,0,1,43,358Zm-3,0a1,1,0,1,1-1,1A1,1,0,0,1,40,358Zm-3,4v11a2,2,0,0,0,2,2H55a2,2,0,0,0,2-2V362H37Z" transform="translate(-36 -355)"/>
-              </svg>
-              <span class="mdc-list-item__text">CRM</span>
-            </li>
-            <li class="mdc-list-item">
-              <div class="vl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22" class="list-item-img">
-                <path class="icon" d="M49,432a4.452,4.452,0,0,1,.121-1H36.5v2H49.121A4.452,4.452,0,0,1,49,432Zm0,12a4.452,4.452,0,0,1,.121-1H36.5v2H49.121A4.452,4.452,0,0,1,49,444Zm-10-6a4.446,4.446,0,0,1,.121-1H36.5v2h2.621A4.446,4.446,0,0,1,39,438Zm8.879-1a4.189,4.189,0,0,1,0,2H56.5v-2H47.879Zm5.621-8a3,3,0,1,0,3,3A3,3,0,0,0,53.5,429Zm-10,6a3,3,0,1,0,3,3A3,3,0,0,0,43.5,435Zm10,6a3,3,0,1,0,3,3A3,3,0,0,0,53.5,441Z" transform="translate(-35.5 -427)"/>
-              </svg>
-              <span class="mdc-list-item__text">MDM</span>
-            </li>
-            <li class="mdc-list-item">
-              <div class="vl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22" class="list-item-img">
-                <path class="icon" d="M41,520l2-3H39Zm-2-4h4V506H39v10Zm2-14a2.081,2.081,0,0,0-2,2.154V505h4v-0.846A2.081,2.081,0,0,0,41,502Zm5-3v2h3v2H46v3h3v2H46v3h3v2H46v3h3v2H46v2h8V499H46Z" transform="translate(-35.5 -498.5)"/>
-              </svg>
-              <span class="mdc-list-item__text">Plan Builder</span>
-            </li>
-            <li class="mdc-list-item">
-              <div class="vl"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22" class="list-item-img">
-                <path class="icon" d="M46.5,579.6a2.4,2.4,0,1,0,2.4,2.4A2.4,2.4,0,0,0,46.5,579.6Zm7-6.6h-14a2,2,0,0,0-2,2v14a2,2,0,0,0,2,2h14a2,2,0,0,0,2-2V575A2,2,0,0,0,53.5,573Zm-1,10H50.71c-0.1,0-.244.77-0.431,1.1l1.13,1.153L49.773,586.9,48.6,585.773c-0.327.188-1.1,0.339-1.1,0.436V588h-2v-1.791c0-.1-0.77-0.242-1.1-0.43l-1.153,1.13L41.6,585.274l1.125-1.176a11.488,11.488,0,0,0-.437-1.1H40.5v-2h1.79a11.771,11.771,0,0,0,.431-1.1l-1.131-1.153,1.637-1.647,1.176,1.125a11.751,11.751,0,0,0,1.1-.437V576h2v1.79c0,0.1.771,0.243,1.1,0.431l1.153-1.13,1.647,1.636L50.273,579.9a11.4,11.4,0,0,0,.437,1.1H52.5v2Z" transform="translate(-35.5 -571)"/>
-              </svg>
-              <span class="mdc-list-item__text">Settings</span>
-            </li>
-          </ul>
-        </div>
-      </aside>
-    </body>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="src/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="src/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="src/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="src/vendor/wow/wow.min.js"></script>
+    <script src="src/vendor/animsition/animsition.min.js"></script>
+    <script src="src/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="src/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="src/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="src/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="src/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="src/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="src/vendor/select2/select2.min.js">
+    </script>
+    <script src="src/vendor/vector-map/jquery.vmap.js"></script>
+    <script src="src/vendor/vector-map/jquery.vmap.min.js"></script>
+    <script src="src/vendor/vector-map/jquery.vmap.sampledata.js"></script>
+    <script src="src/vendor/vector-map/jquery.vmap.world.js"></script>
+    <script>
+      $("#news").ready(function(){
+        
+        for(var i = 0; i<1; i++)
+        {
+            //add obj to div
+
+            var table = document.createElement("tbody");
+            $("#news").append(table);
+            
+
+            var tr = document.createElement("tr");//create element
+            table.appendChild(tr);
+            tr.classList.add("rhov");//add css
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var body = document.createElement("div");
+            td.appendChild(body);
+            body.classList.add("table-data__info");
+
+            var h6 = document.createElement("h6");
+            body.appendChild(h6);
+            h6.innerHTML = '20-03-2021';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Store#1';
+            
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Channel#1';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var div = document.createElement("div");
+            td.appendChild(div);
+            div.classList.add("text-stat1");
+            div.classList.add("tabblue");
+            div.innerHTML = 'RD';
+
+
+            var spank = document.createElement("span");
+            td.appendChild(spank);
+            span.classList.add("text-stat");
+            spank.innerHTML = 'Rudi Doe';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var divka = document.createElement("div");
+            td.appendChild(divka);
+            divka.classList.add("text-stat2");
+            divka.classList.add("tabgreen");
+
+
+            var koll = document.createElement("span");
+            td.appendChild(koll);
+            koll.classList.add("span");
+            koll.innerHTML = 'Completed';
+
+
+
+
+
+            var tr = document.createElement("tr");//create element
+            table.appendChild(tr);
+            tr.classList.add("rhov");//add css
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var body = document.createElement("div");
+            td.appendChild(body);
+            body.classList.add("table-data__info");
+
+            var h6 = document.createElement("h6");
+            body.appendChild(h6);
+            h6.innerHTML = '20-03-2021';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Store#2';
+            
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Channel#2';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var div = document.createElement("div");
+            td.appendChild(div);
+            div.classList.add("text-stat1");
+            div.classList.add("taborange");
+            div.innerHTML = 'RM';
+
+
+            var spank = document.createElement("span");
+            td.appendChild(spank);
+            span.classList.add("text-stat");
+            spank.innerHTML = 'Rian Massive';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var divka = document.createElement("div");
+            td.appendChild(divka);
+            divka.classList.add("text-stat2");
+            divka.classList.add("tabred");
+
+
+            var koll = document.createElement("span");
+            td.appendChild(koll);
+            koll.classList.add("ml");
+            koll.innerHTML = 'Rejected';
+
+
+
+
+
+
+
+            var tr = document.createElement("tr");//create element
+            table.appendChild(tr);
+            tr.classList.add("rhov");//add css
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var body = document.createElement("div");
+            td.appendChild(body);
+            body.classList.add("table-data__info");
+
+            var h6 = document.createElement("h6");
+            body.appendChild(h6);
+            h6.innerHTML = '20-03-2021';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Store#2';
+            
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Channel#3';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var div = document.createElement("div");
+            td.appendChild(div);
+            div.classList.add("text-stat1");
+            div.classList.add("tabpink");
+            div.innerHTML = 'AT';
+
+
+            var spank = document.createElement("span");
+            td.appendChild(spank);
+            span.classList.add("text-stat");
+            spank.innerHTML = 'Anjas Tora';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var divka = document.createElement("div");
+            td.appendChild(divka);
+            divka.classList.add("text-stat2");
+            divka.classList.add("taborange");
+
+
+            var koll = document.createElement("span");
+            td.appendChild(koll);
+            koll.classList.add("OR");
+            koll.innerHTML = 'Pending';
+
+
+///////////////////////////////////
+
+
+
+            var tr = document.createElement("tr");//create element
+            table.appendChild(tr);
+            tr.classList.add("rhov");//add css
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var body = document.createElement("div");
+            td.appendChild(body);
+            body.classList.add("table-data__info");
+
+            var h6 = document.createElement("h6");
+            body.appendChild(h6);
+            h6.innerHTML = '20-03-2021';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Store#4';
+            
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Channel#4';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var div = document.createElement("div");
+            td.appendChild(div);
+            div.classList.add("text-stat1");
+            div.classList.add("tabgreen1");
+            div.innerHTML = 'LK';
+
+
+            var spank = document.createElement("span");
+            td.appendChild(spank);
+            span.classList.add("text-stat");
+            spank.innerHTML = 'Lauren Kiev  ';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var divka = document.createElement("div");
+            td.appendChild(divka);
+            divka.classList.add("text-stat2");
+            divka.classList.add("tabgreen");
+
+
+            var koll = document.createElement("span");
+            td.appendChild(koll);
+            koll.classList.add("span");
+            koll.innerHTML = 'Completed';
+
+
+
+
+
+            var tr = document.createElement("tr");//create element
+            table.appendChild(tr);
+            tr.classList.add("rhov");//add css
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var body = document.createElement("div");
+            td.appendChild(body);
+            body.classList.add("table-data__info");
+
+            var h6 = document.createElement("h6");
+            body.appendChild(h6);
+            h6.innerHTML = '20-03-2021';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Store#5';
+            
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var span = document.createElement("span");
+            td.appendChild(span);
+            span.classList.add("role");
+            span.innerHTML = 'Channel#5';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var div = document.createElement("div");
+            td.appendChild(div);
+            div.classList.add("text-stat1");
+            div.classList.add("tabred");
+            div.innerHTML = 'CY';
+
+
+            var spank = document.createElement("span");
+            td.appendChild(spank);
+            span.classList.add("text-stat");
+            spank.innerHTML = 'Coco Yarn';
+
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            td.classList.add("td");
+
+            var divka = document.createElement("div");
+            td.appendChild(divka);
+            divka.classList.add("text-stat2");
+            divka.classList.add("tabgreen");
+
+
+            var koll = document.createElement("span");
+            td.appendChild(koll);
+            koll.classList.add("span");
+            koll.innerHTML = 'Completed';
+
+
+
+
+
+
+
+
+
+        }
+      });
+  </script>
+
+  <script>
+      // Get the container element
+      var liContainer = document.getElementById("myDIV");
+
+      // Get all buttons with class="btn" inside the container
+      var lis = liContainer.getElementsByClassName("biton");
+
+      // Loop through the buttons and add the active class to the current/clicked button
+      for (var i = 0; i < lis.length; i++) {
+          lis[i].addEventListener("click", function() {
+              var current = document.getElementsByClassName("active");
+              current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+          });
+      }
+  </script>
+    <!-- Main JS-->
+    <script src="src/js/main.js"></script>
+    <script src="src/js/calendar.js"></script>
+    <script src="src/js/index.js"></script>
+
+</body>
+
 </html>
+<!-- end document-->
