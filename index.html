@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="src/css/calendar.css">
     <!-- Title Page-->
     <title>Dash</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 
     <!-- Fontfaces CSS-->
     <link href="src/css/font-face.css" rel="stylesheet" media="all">
@@ -148,7 +150,7 @@
                                       <i class="fa fa-search" aria-hidden="true"></i>
                                       <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
                                     </form>
-                                    <button class="au-btn au-btn-icon au-btn--blue" >
+                                    <button class="au-btn au-btn-icon au-btn--blue" onclick="loadData()">
                                         Create new value <i class="zmdi zmdi-plus"></i></button>
                                 </div>
                             </div>
@@ -389,8 +391,64 @@
             </section>
             <!-- END PAGE CONTAINER-->
         </div>
+        
 
     </div>
+
+    <script>
+
+        var data = function() {
+              var jsonTemp = null;
+              $.ajax({
+                  async: true,
+                  type: "Get",
+                  url: "src/data/data.json",
+                  dataType: "json",
+                  success: function(data) {
+                      jsonTemp = data.newsItems;
+                  },
+                  error: function(){
+                    alert("json not found");
+                  }
+              });
+              return jsonTemp;
+          }();
+  
+          function loadData() {
+              const xhr = new XMLHttpRequest();
+  
+              xhr.onreadystatechange = function() {
+                  if (xhr.readyState == 4) {
+                      if (xhr.status == 200) {
+                          alert(xhr.responseText);
+                      }
+                      if (xhr.status == 404) {
+                          alert('Ups...error :(');
+                      }
+                  }
+              }
+  
+              xhr.open('get', 'src/data/data.json', true);
+              xhr.send();
+          }
+          
+          function newsContainerItem(left, right) {
+              var html = '';
+              html = html + '<li class="mdc-list-item" id="cardlines" tabindex="0">\n' +'<span class="mdc-list-item__ripple">'+'</span>\n'+'<span class="mdc-list-item__text" id = "left">' + left + '</span>\n' +
+                  '<span class="mdc-list-item__text" id = "right">' + right + '</span>\n' + '/li\n';
+  
+              return html;
+          }
+  
+          function newsContainerBuilder() {
+              var html = '';
+              for (var i = 0; i < data.length; i++) {
+                  html = html + newsContainerItem(data[i].left, data[i].right);
+              }
+              $('#news-block').html(html);
+          }/**/
+  
+      </script>
 
     <!-- Jquery JS-->
     <script src="src/vendor/jquery-3.2.1.min.js"></script>
@@ -808,6 +866,7 @@
     <script src="src/js/main.js"></script>
     <script src="src/js/calendar.js"></script>
     <script src="src/js/index.js"></script>
+    
 
 </body>
 

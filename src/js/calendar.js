@@ -36,7 +36,7 @@ class Calendar
 		<div id='calendar'>
 		<header class="calendar-head">
 		<div id='calendar-left-btn' class="calendar-arrow">
-		<img class="calendar-arrow-left" src="image/left-arrow.png" alt="">
+		<img class="calendar-arrow-left" src="src/image/left-arrow.png" alt="">
 		</div>
 
 		<div class="calender-header-text">
@@ -45,7 +45,7 @@ class Calendar
 		</div>
 
 		<div id='calendar-right-btn' class="calendar-arrow">
-		<img class='calendar-arrow-right' src="image/right-arrow.png" alt="">
+		<img class='calendar-arrow-right' src="src/image/right-arrow.png" alt="">
 		</div>
 		<table class="calendar-days-names">
 		<td class='calendar-days-names-item'>MON</td>
